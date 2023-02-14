@@ -1,5 +1,8 @@
-# CFD_Julia
+# CFD_Julia (in Python)
 This repository contains fundamental codes related to CFD that can be included in any graduate level CFD coursework. 
+
+# Modified from Tzu-Yao
+This forked repository adds support to python language with Jupyter notebook. Moreover, the typos in the original are pointed out explicitly in the Jupyter notebook
 
 # Published manuscript
 For more details on this work, please refer CFD Julia: A Learning Module Structuring an Introductory Course on Computational Fluid Dynamics (https://www.mdpi.com/2311-5521/4/3/159)
