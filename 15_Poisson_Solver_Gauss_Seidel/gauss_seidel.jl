@@ -2,7 +2,7 @@
 
 using CPUTime
 using Printf
-using ASTInterpreter2
+#using ASTInterpreter2
 using DelimitedFiles
 
 function compute_residual(nx, ny, dx, dy, f, u_n, r)
