@@ -2,7 +2,7 @@
 This repository contains fundamental codes related to CFD that can be included in any graduate level CFD coursework. 
 
 # Modified from Tzu-Yao
-This forked repository adds support to python language with Jupyter notebook. Moreover, the typos in the original are pointed out explicitly in the Jupyter notebook
+This forked repository adds support to python language with Jupyter notebook. Cases with similar equations are integrated into one Notebook instead of distributed into several folders. Moreover, the typos in the original are pointed out explicitly in the Jupyter notebook. Also, the original author claimed that Julia language is significantly faster than python even with vectorization (Table above Listing 30 in the Journal). However, ***the speeds between Julia and Python are actually comparable*** (within ~20% difference) at least when applying Python 3.9.13, NumPy 1.21.5, and SciPy 1.9.1 in Jupyter environment. It should be noted that the accuracy and efficiency of pyFFTW still seems better than the SciPy counterpart as mentioned in the tutorial.
 
 # Published manuscript
 For more details on this work, please refer CFD Julia: A Learning Module Structuring an Introductory Course on Computational Fluid Dynamics (https://www.mdpi.com/2311-5521/4/3/159)
