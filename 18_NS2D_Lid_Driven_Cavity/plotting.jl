@@ -2,6 +2,8 @@ using DelimitedFiles
 
 using CSV
 using PyPlot
+using Images
+imgS = load("18_NS2D_Lid_Driven_Cavity/LDC_bench_Re100.jpeg")
 #using GR
 #using Plots
 #plotly()
@@ -55,18 +57,21 @@ for c in cs.collections
       c.set_linewidth(0.000000000001)
 end
 
-cs = ax2.contourf(xx, yy, transpose(sn),levels=60, cmap="jet")
+fig.colorbar(cs, ax = ax1)
+
+ax.imshow(imgS, aspect="auto", extent=[0, 1, 0, 1])
+cs1 = ax2.contour(xx, yy, transpose(sn),levels=20, cmap="jet")
 ax2.set_xlabel("\$X\$")
 ax2.set_ylabel("\$Y\$")
 ax2.set_title("Streamfunction")
 
-for c in cs.collections
+for c in cs1.collections
       c.set_edgecolor("face")
       c.set_linewidth(0.000000000001)
 end
 
-fig.colorbar(cs, ax = ax1)
-fig.colorbar(cs, ax = ax2)
+
+fig.colorbar(cs1, ax = ax2)
 
 fig.tight_layout()
 fig.savefig("ldc_contour.pdf")

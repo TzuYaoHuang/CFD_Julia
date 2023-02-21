@@ -1,4 +1,4 @@
-clearconsole()
+
 
 using CPUTime
 using Printf
@@ -81,7 +81,7 @@ function bc2(nx,ny,dx,dy,w,s)
     # boundary condition for vorticity (Jensen) bottom and top
     for i = 1:nx+1
         w[i,1] = (-4.0*s[i,2]+0.5*s[i,3])/(dy*dy)
-        w[i,ny+1]= (-4.0*s[i,ny]+0.5*s[i,ny-1])/(dy*dy) - 3.0/dy
+        w[i,ny+1]= (-4.0*s[i,ny]+0.5*s[i,ny-1])/(dy*dy) + 3.0/dy
     end
 end
 
@@ -195,7 +195,7 @@ dx = (x_r-x_l)/nx
 dy = (y_t-y_b)/ny
 
 dt = 0.001
-tf = 10.0
+tf = 0.001
 nt = Int64(tf/dt)
 re = 100.0
 
